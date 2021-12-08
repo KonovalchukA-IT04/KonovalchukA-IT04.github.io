@@ -241,13 +241,13 @@ function generateChild(position){
 
 function gameMove(){
     let first_position = createNewObj();
-    first_position.child = generatePositions(first_position, 3);
+    first_position.child = generatePositions(first_position, difficulty);
     if(first_position.child == null){
         alert("Було просто! У опонента закінчились ходи)\nПеремога червоних!");
         createRestartButton();
         return;
     }
-    let road_eval_num = minimax(first_position, 3, -99, 99, true);
+    let road_eval_num = minimax(first_position, difficulty, -99, 99, true);
     findPath(first_position, road_eval_num);
     first_position = getTrueMatrix(first_position);
     placeBlueLine(first_position);
