@@ -1,0 +1,299 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Play Snakes</title>
+    <link rel="stylesheet" type="text/css" href="field_stylesheets.css" />
+</head>
+
+<body>
+    <div class="plain-top">
+        <div class="plain-bar">
+            <div id="plain">
+                <div class="image">
+                    <table cellspacing="0" cellpadding="0" border="0">
+                        <tbody>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="1"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="1-2"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="2"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="2-3"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="3"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="3-4"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="4"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="4-5"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="5"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="1-6"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c1"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="2-7"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c2"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="3-8"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c3"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="4-9"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c4"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="5-10"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="6"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="6-7"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_B.gif" alt="B" border="0" width="9" height="9" id="7"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="7-8"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="8"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="8-9"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="9"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="9-10"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="10"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="6-11"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c5"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="7-12"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c6"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="8-13"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c7"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="9-14"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c8"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="10-15"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="11"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="11-12"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="12"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="12-13"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="13"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="13-14"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="14"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="14-15"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="15"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="11-16"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c9"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="12-17"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c10"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="13-18"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c11"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="14-19"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c12"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="15-20"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="16"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="16-17"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="17"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="17-18"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="18"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="18-19"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_R.gif" alt="R" border="0" width="9" height="9" id="19"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="19-20"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="20"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="16-21"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c13"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="17-22"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c14"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="18-23"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c15"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="19-24"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="39">
+                                    <img src="imgs/dab_C.gif" alt="C" border="0" width="39" height="39" id="c16"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="39" width="9">
+                                    <img class="line" src="imgs/dab_V.gif" onclick="placeLine(this.id)" alt="V" border="0" width="9" height="39" id="20-25"/>
+                                </td>
+                            </tr>
+                            <tr valign="TOP">
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="21"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="21-22"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="22"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="22-23"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="23"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="23-24"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="24"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="39">
+                                    <img class="line" src="imgs/dab_H.gif" onclick="placeLine(this.id)" alt="H" border="0" width="39" height="9" id="24-25"/>
+                                </td>
+                                <td align="CENTER" valign="MIDDLE" height="9" width="9">
+                                    <img src="imgs/dab_D.gif" alt="D" border="0" width="9" height="9" id="25"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bottommenu">
+            <div class="difficultymenu">
+                <p></p>
+                <p></p>
+                <p>Виберіть складність:</p>
+                <input type="radio" name="savetheoption" value="1" onclick="changeTheDifficulty(this.value)"> "Легко"
+                <input type="radio" name="savetheoption" value="2" onclick="changeTheDifficulty(this.value)" checked="checked"> "Стандарт"
+                <input type="radio" name="savetheoption" value="4" onclick="changeTheDifficulty(this.value)"> "Важко"
+            </div>
+            <div class="start_bar" style="display: flex; align-content:center; margin: 20px; flex-direction: column; width: 70px;" onclick="startButton()">
+                <button class="statrbutton">Start</button>
+            </div>
+        </div>
+    </div>
+    <script src="visual_scripts.js"></script>
+</body>
+
+</html>
