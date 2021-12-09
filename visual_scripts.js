@@ -143,16 +143,16 @@ function createNewObj(){
 }
 
 
-function generatePositions(position, depth){
+function generatePositions(position, depth, max_depth){
     if(depth == 0){        
         return position.child;        
     }
-    position.child = generateChild(position);
+    position.child = generateChild(position, (max_depth-depth));
     if(position.child == null){
         return position.child;
     }
     position.child.forEach(element => {
-        element.child = generatePositions(element, depth-1);
+        element.child = generatePositions(element, depth-1, max_depth);
     });
     return position.child;
 }
@@ -174,7 +174,7 @@ function getMovesNum(x, y, matrix){
     return count;
 }
 
-function generateChild(position){
+function generateChild(position, max_depth){
     let new_set = new Set();
     let x = position.head_x;
     let y = position.head_y;
@@ -188,7 +188,7 @@ function generateChild(position){
             matrix_copy = copyMatrix(position.matrix);
             matrix_copy[y][x+1] = 2;
             cur_matrix[y][x+1] = 2;
-            moves_count = getMovesNum(x+1,y,matrix_copy);
+            moves_count = getMovesNum(x+1,y,matrix_copy) + max_depth;
             let b = new Position(moves_count);
             b.matrix = matrix_copy;
             b.head_x = x+1;
@@ -200,7 +200,7 @@ function generateChild(position){
             matrix_copy = copyMatrix(position.matrix);
             matrix_copy[y][x-1] = 2;
             cur_matrix[y][x-1] = 2;
-            moves_count = getMovesNum(x-1,y,matrix_copy);
+            moves_count = getMovesNum(x-1,y,matrix_copy) + max_depth;
             let b = new Position(moves_count);
             b.matrix = matrix_copy;
             b.head_x = x-1;
@@ -212,7 +212,7 @@ function generateChild(position){
             matrix_copy = copyMatrix(position.matrix);
             matrix_copy[y+1][x] = 2;
             cur_matrix[y+1][x] = 2;
-            moves_count = getMovesNum(x,y+1,matrix_copy);
+            moves_count = getMovesNum(x,y+1,matrix_copy) + max_depth;
             let b = new Position(moves_count);
             b.matrix = matrix_copy;
             b.head_x = x;
@@ -224,7 +224,7 @@ function generateChild(position){
             matrix_copy = copyMatrix(position.matrix);
             matrix_copy[y-1][x] = 2;
             cur_matrix[y-1][x] = 2;
-            moves_count = getMovesNum(x,y-1,matrix_copy);
+            moves_count = getMovesNum(x,y-1,matrix_copy) + max_depth;
             let b = new Position(moves_count);
             b.matrix = matrix_copy;
             b.head_x = x;
@@ -241,7 +241,8 @@ function generateChild(position){
 
 function gameMove(){
     let first_position = createNewObj();
-    first_position.child = generatePositions(first_position, difficulty);
+    first_position.child = generatePositions(first_position, difficulty, difficulty);
+    console.log(first_position);
     if(first_position.child == null){
         alert("Було просто! У опонента закінчились ходи)\nПеремога червоних!");
         createRestartButton();
