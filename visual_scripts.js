@@ -242,7 +242,6 @@ function generateChild(position, max_depth){
 function gameMove(){
     let first_position = createNewObj();
     first_position.child = generatePositions(first_position, difficulty, difficulty);
-    console.log(first_position);
     if(first_position.child == null){
         alert("Було просто! У опонента закінчились ходи)\nПеремога червоних!");
         createRestartButton();
