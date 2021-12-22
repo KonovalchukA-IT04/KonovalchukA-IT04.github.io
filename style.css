@@ -1,0 +1,9 @@
+.pic_place{
+    display: flex;
+    flex-direction: row;
+}
+.dice-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
