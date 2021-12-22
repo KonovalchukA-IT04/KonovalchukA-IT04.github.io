@@ -204,7 +204,7 @@ function bot_re_roll_logic(is_second){
                 setTimeout(() => {                    
                     who_is_winner();   
                     createRestartButton();                     
-                }, 3000);
+                }, 4000);
                 return;
             }
         }
@@ -249,13 +249,13 @@ function bot_re_roll_logic(is_second){
                 setTimeout(() => {                    
                     who_is_winner();
                     return createRestartButton();
-                }, 3000);
+                }, 4000);
             }else{
                 moves_counter = 2 - moves_retainer;
                     return nextStepForPlayer();
             }
         }
-    }, 3000);
+    }, 4000);
 }
 
 function is_more_powerfull(master, slave){
@@ -319,7 +319,7 @@ function player_move(){
             count ++;
             createCheckBoxes(count);
         }
-    }, 3000);
+    }, 4000);
 }
 
 function startTheGame(){
@@ -342,7 +342,7 @@ function startTheGame(){
                 createCheckBoxes(count);
             }
             updateScore(player_hand);
-        }, 3000);
+        }, 4000);
     }
     else{
         player_is_second = true;
@@ -422,7 +422,7 @@ function reroll(){
         setTimeout(() => {            
             createButtons();
             alertBox('У вас залишилось ходів: '+moves_counter);
-        }, 3000);
+        }, 4000);
     }
     else{
         moves_retainer = 2 - moves_counter;
@@ -542,7 +542,7 @@ function RollForToss_player(){
         b.appendChild(t);
         b.setAttribute("onclick", "RollForToss_bot()");
         q.appendChild(b);
-    }, 3000);
+    }, 4000);
 }
 
 function RollForToss_bot(){
@@ -564,5 +564,5 @@ function RollForToss_bot(){
         else{
             alert('Перший хід - опонента');
         }
-    }, 3000);
+    }, 4000);
 }
